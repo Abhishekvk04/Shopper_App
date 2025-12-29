@@ -266,8 +266,8 @@ export default function LandingPage() {
 
       {/* Big Image / Demo Placeholder */}
       {/* Video Demo Section */}
-      <section id="demo" className="px-6 pb-32">
-        <div className="max-w-7xl mx-auto bg-gray-900 rounded-3xl p-2 md:p-4 shadow-2xl overflow-hidden relative group">
+      <section id="demo" className="px-2 md:px-6 pb-20 md:pb-32">
+        <div className="max-w-7xl mx-auto bg-gray-900 rounded-xl md:rounded-3xl p-1 md:p-4 shadow-2xl overflow-hidden relative group">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-gray-800 to-black opacity-50 z-0"></div>
 
           {/* Browser Mockup Header */}

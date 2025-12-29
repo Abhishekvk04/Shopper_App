@@ -9,6 +9,48 @@ export default function KnowledgeBase() {
     const [loading, setLoading] = useState(true);
     const [previewDoc, setPreviewDoc] = useState<{ name: string, content: string } | null>(null);
     const [newA, setNewA] = useState("");
+    const [isListening, setIsListening] = useState(false);
+    const [lang, setLang] = useState("en-US");
+
+    const languages = [
+        { code: "en-US", name: "English" },
+        { code: "hi-IN", name: "Hindi (हिंदी)" },
+        { code: "kn-IN", name: "Kannada (ಕನ್ನಡ)" },
+        { code: "te-IN", name: "Telugu (తెలుగు)" },
+        { code: "ta-IN", name: "Tamil (தமிழ்)" },
+        { code: "ml-IN", name: "Malayalam (മലയാളം)" }
+    ];
+
+    function startListening() {
+        if (!('webkitSpeechRecognition' in window)) {
+            alert("Your browser does not support voice input. Try Chrome!");
+            return;
+        }
+
+        const recognition = new (window as any).webkitSpeechRecognition();
+        recognition.lang = lang;
+        recognition.continuous = false;
+        recognition.interimResults = false;
+
+        setIsListening(true);
+
+        recognition.onresult = (event: any) => {
+            const transcript = event.results[0][0].transcript;
+            setNewA(prev => prev + (prev ? " " : "") + transcript);
+            setIsListening(false);
+        };
+
+        recognition.onerror = (event: any) => {
+            console.error(event.error);
+            setIsListening(false);
+        };
+
+        recognition.onend = () => {
+            setIsListening(false);
+        };
+
+        recognition.start();
+    }
 
     useEffect(() => {
         fetchData();
@@ -91,9 +133,14 @@ export default function KnowledgeBase() {
     return (
         <div className="min-h-screen bg-gray-50 p-8">
             <div className="max-w-4xl mx-auto">
-                <header className="mb-8 flex justify-between items-center">
-                    <h1 className="text-3xl font-bold text-gray-800">Knowledge Base</h1>
-                    <a href="/" className="text-blue-600 hover:underline">← Back to Dashboard</a>
+                <header className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <div>
+                        <h1 className="text-3xl font-bold text-gray-900">Knowledge Base</h1>
+                        <p className="text-gray-500 text-sm mt-1">Manage what your AI knows about your business.</p>
+                    </div>
+                    <a href="/dashboard" className="flex items-center gap-2 text-gray-600 hover:text-blue-600 font-medium transition bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-100 hover:border-blue-100">
+                        <span>←</span> Back to Dashboard
+                    </a>
                 </header>
 
                 {/* Upload Document Form */}
@@ -191,16 +238,33 @@ export default function KnowledgeBase() {
                     </div>
                 </div>
 
-                {/* Add New Form */}
                 <div className="bg-white p-6 rounded-lg shadow-sm mb-8">
-                    <h2 className="text-lg font-semibold mb-4">📝 Paste Text Content</h2>
+                    <h2 className="text-lg font-semibold mb-4 text-gray-900">📝 Paste Text Content</h2>
+
+                    {/* Voice Controls */}
+                    <div className="flex gap-2 items-center mb-4 bg-gray-50 p-2 rounded-lg border border-gray-200">
+                        <select
+                            value={lang}
+                            onChange={(e) => setLang(e.target.value)}
+                            className="text-sm p-2 rounded border border-gray-300 text-gray-700 outline-none focus:ring-2 focus:ring-blue-500"
+                        >
+                            {languages.map(l => <option key={l.code} value={l.code}>{l.name}</option>)}
+                        </select>
+                        <button
+                            type="button"
+                            onClick={startListening}
+                            className={`flex items-center gap-2 px-3 py-2 rounded text-sm font-bold transition ${isListening ? 'bg-red-500 text-white animate-pulse' : 'bg-blue-600 text-white hover:bg-blue-700'}`}
+                        >
+                            {isListening ? '🎤 Listening...' : '🎤 Speak'}
+                        </button>
+                    </div>
                     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700">Content (Paste text here)</label>
                             <textarea
                                 value={newA}
                                 onChange={e => setNewA(e.target.value)}
-                                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 border"
+                                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 border text-gray-900 selection:bg-blue-200 selection:text-blue-900"
                                 placeholder="e.g. paste your entire menu or FAQ page text here..."
                                 rows={6}
                             />
