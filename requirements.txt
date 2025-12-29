@@ -9,3 +9,12 @@ requests
 pytest
 httpx
 python-multipart
+google-genai
+faiss-cpu
+langdetect
+numpy
+pypdf
+passlib
+python-jose[cryptography]
+bcrypt==3.2.2
+psycopg2-binary
