@@ -19,13 +19,21 @@ async def whatsapp_webhook(
     Twilio webhook endpoint.
     Twilio sends data as form-encoded.
     """
-    core_router(
-        db, 
-        From, 
-        Body or "", 
-        To, 
-        media_url=MediaUrl0, 
-        latitude=Latitude, 
-        longitude=Longitude
-    )
-    return {"status": "success"}
+    print(f"DEBUG: Webhook Received | From: {From} | To: {To} | Body: {Body} | Media: {MediaUrl0}")
+    
+    try:
+        core_router(
+            db, 
+            From, 
+            Body or "", 
+            To, 
+            media_url=MediaUrl0, 
+            latitude=Latitude, 
+            longitude=Longitude
+        )
+        return {"status": "success"}
+    except Exception as e:
+        print(f"CRITICAL ERROR in Webhook: {e}")
+        import traceback
+        traceback.print_exc()
+        return {"status": "error", "message": str(e)}
