@@ -73,7 +73,10 @@ export default function Login() {
     <div className="min-h-screen flex items-center justify-center bg-white p-6">
       <div className="w-full max-w-sm">
         <div className="mb-10 text-center">
-          <Link href="/" className="text-2xl font-bold tracking-tight text-black">shopper.</Link>
+          <Link href="/" className="text-2xl font-bold tracking-tight text-black flex items-center justify-center gap-2">
+            <span className="w-8 h-8 bg-violet-600 rounded-lg flex items-center justify-center text-white text-lg font-mono font-bold">Z</span>
+            Zopit.
+          </Link>
         </div>
 
         <h1 className="text-3xl font-bold mb-2 tracking-tight text-gray-900">
@@ -94,7 +97,7 @@ export default function Login() {
                   type="text"
                   placeholder="Username"
                   required
-                  className="w-full border-b border-gray-300 py-3 text-lg bg-transparent outline-none focus:border-black transition placeholder:text-gray-400 text-black"
+                  className="w-full border-b border-gray-300 py-3 text-lg bg-transparent outline-none focus:border-violet-600 transition placeholder:text-gray-400 text-black"
                   value={formData.username}
                   onChange={e => setFormData({ ...formData, username: e.target.value })}
                 />
@@ -104,7 +107,7 @@ export default function Login() {
                   type="password"
                   placeholder="Access Code (6 digits)"
                   required
-                  className="w-full border-b border-gray-300 py-3 text-lg bg-transparent outline-none focus:border-black transition placeholder:text-gray-400 text-black"
+                  className="w-full border-b border-gray-300 py-3 text-lg bg-transparent outline-none focus:border-violet-600 transition placeholder:text-gray-400 text-black"
                   value={formData.auth_code}
                   onChange={e => setFormData({ ...formData, auth_code: e.target.value })}
                 />
@@ -112,7 +115,7 @@ export default function Login() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-black text-white mt-8 py-3.5 rounded-full font-medium hover:bg-gray-800 transition disabled:opacity-50"
+                className="w-full bg-violet-600 text-white mt-8 py-3.5 rounded-full font-medium hover:bg-violet-700 transition disabled:opacity-50"
               >
                 {loading ? 'Verifying...' : 'Log in'}
               </button>
@@ -142,7 +145,7 @@ export default function Login() {
               <input
                 type="text"
                 placeholder="Phone Number (WhatsApp)"
-                className="w-full border-b border-gray-300 py-3 text-lg bg-transparent outline-none focus:border-black transition placeholder:text-gray-400 text-black"
+                className="w-full border-b border-gray-300 py-3 text-lg bg-transparent outline-none focus:border-violet-600 transition placeholder:text-gray-400 text-black"
                 value={recoverPhone}
                 onChange={e => setRecoverPhone(e.target.value)}
               />
@@ -150,7 +153,7 @@ export default function Login() {
             <button
               onClick={() => handleRecover(mode === 'recover_username' ? 'username' : 'code')}
               disabled={loading}
-              className="w-full bg-black text-white py-3.5 rounded-full font-medium hover:bg-gray-800 transition disabled:opacity-50"
+              className="w-full bg-violet-600 text-white py-3.5 rounded-full font-medium hover:bg-violet-700 transition disabled:opacity-50"
             >
               {loading ? 'Sending...' : 'Send Recovery Info'}
             </button>

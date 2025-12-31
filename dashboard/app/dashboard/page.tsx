@@ -66,31 +66,34 @@ export default function Dashboard() {
   if (loading) return <div className="p-10 text-xl text-gray-800">Loading AI Front Desk...</div>;
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4 md:p-8">
-      <div className="max-w-6xl mx-auto">
-        <header className="mb-6 flex flex-col md:flex-row md:justify-between md:items-center gap-6 md:gap-0">
+    <div className="min-h-screen bg-violet-50/50 p-4 md:p-8 font-sans selection:bg-violet-200 selection:text-violet-900">
+      <div className="max-w-7xl mx-auto">
+        <header className="mb-8 flex flex-col md:flex-row md:justify-between md:items-center gap-6 md:gap-0">
           <div className="flex flex-col gap-2">
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-800">AI Front Desk</h1>
-            <div className="flex flex-wrap gap-3 items-center">
-              <span className="text-gray-500 text-sm">Business Control Center</span>
-              <a href="/kb" className="inline-flex items-center bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold hover:bg-blue-100 transition border border-blue-200">
-                Manage Knowledge Base →
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight flex items-center gap-3">
+              <span className="w-10 h-10 bg-violet-600 rounded-xl flex items-center justify-center text-white text-xl font-mono font-bold shadow-lg shadow-violet-200">Z</span>
+              Zopit Dashboard
+            </h1>
+            <div className="flex flex-wrap gap-3 items-center ml-1">
+              <span className="text-gray-500 text-sm font-medium">Business Control Center</span>
+              <a href="/kb" className="inline-flex items-center bg-white text-violet-700 px-4 py-1.5 rounded-full text-xs font-bold hover:bg-violet-50 transition border border-violet-100 shadow-sm hover:shadow group">
+                Manage Knowledge Base <span className="group-hover:translate-x-1 transition-transform">→</span>
               </a>
             </div>
           </div>
 
-          <div className="flex items-center justify-between md:justify-end gap-3 w-full md:w-auto bg-white md:bg-transparent p-3 md:p-0 rounded-xl shadow-sm md:shadow-none border md:border-none border-gray-100">
-            <div className="flex items-center gap-2">
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+          <div className="flex items-center justify-between md:justify-end gap-3 w-full md:w-auto bg-white/60 backdrop-blur-md p-2 rounded-2xl shadow-sm border border-white/50">
+            <div className="flex items-center gap-2 px-3">
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
               </span>
-              <span className="text-sm font-medium text-gray-700">Online</span>
+              <span className="text-sm font-semibold text-gray-700">System Online</span>
             </div>
-            <div className="h-4 w-px bg-gray-200 mx-2 hidden md:block"></div>
+            <div className="h-6 w-px bg-gray-200/50 mx-2 hidden md:block"></div>
             <button
               onClick={handleLogout}
-              className="text-red-600 hover:text-red-700 text-sm font-semibold hover:bg-red-50 px-3 py-1.5 rounded-lg transition"
+              className="text-gray-500 hover:text-red-600 text-sm font-semibold hover:bg-red-50 px-4 py-2 rounded-xl transition flex items-center gap-2"
             >
               Logout
             </button>
@@ -98,36 +101,43 @@ export default function Dashboard() {
         </header>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-8">
-          <div className="bg-white p-4 md:p-6 rounded-lg shadow-sm border-l-4 border-blue-500">
-            <h3 className="text-gray-500 text-xs md:text-sm uppercase font-semibold">Total Queries</h3>
-            <p className="text-2xl md:text-4xl font-bold text-gray-800 mt-2">{stats.total_queries}</p>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-10">
+          <div className="bg-white/80 backdrop-blur-xl p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/20 hover:border-violet-100 transition group">
+            <h3 className="text-gray-400 text-xs uppercase font-bold tracking-widest mb-1 group-hover:text-violet-500 transition-colors">Total Queries</h3>
+            <p className="text-3xl font-bold text-gray-900">{stats.total_queries}</p>
           </div>
 
-          <div className="bg-white p-4 md:p-6 rounded-lg shadow-sm border-l-4 border-purple-500">
-            <h3 className="text-gray-500 text-xs md:text-sm uppercase font-semibold">AI Handled</h3>
-            <p className="text-2xl md:text-4xl font-bold text-purple-600 mt-2">{stats.ai_handled}</p>
-            <p className="text-xs text-green-600 mt-1">Saved ~{stats.time_saved_mins} mins</p>
+          <div className="bg-gradient-to-br from-violet-600 to-indigo-700 p-6 rounded-2xl shadow-xl shadow-violet-200 text-white relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full translate-x-10 -translate-y-10 blur-2xl"></div>
+            <h3 className="text-violet-100 text-xs uppercase font-bold tracking-widest mb-1 relative z-10">AI Handled</h3>
+            <p className="text-3xl font-bold text-white relative z-10">{stats.ai_handled}</p>
+            <p className="text-xs text-violet-200 mt-2 flex items-center gap-1 relative z-10 bg-white/10 w-fit px-2 py-1 rounded-lg">
+              ⚡ Saved ~{stats.time_saved_mins} mins
+            </p>
           </div>
 
-          <div className="bg-white p-4 md:p-6 rounded-lg shadow-sm border-l-4 border-red-500">
-            <h3 className="text-gray-500 text-xs md:text-sm uppercase font-semibold">Pending</h3>
-            <p className="text-2xl md:text-4xl font-bold text-red-600 mt-2">{stats.unanswered}</p>
-            {stats.unanswered > 0 && <span className="text-xs text-red-500 animate-pulse">Action Required</span>}
+          <div className="bg-white/80 backdrop-blur-xl p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/20 hover:border-red-100 transition group">
+            <h3 className="text-gray-400 text-xs uppercase font-bold tracking-widest mb-1 group-hover:text-red-500 transition-colors">Pending Action</h3>
+            <p className="text-3xl font-bold text-gray-900">{stats.unanswered}</p>
+            {stats.unanswered > 0 && <span className="text-[10px] font-bold bg-red-100 text-red-600 px-2 py-0.5 rounded-full mt-2 inline-block animate-pulse">Action Required</span>}
           </div>
 
-          <div className="bg-white p-4 md:p-6 rounded-lg shadow-sm border-l-4 border-green-500">
-            <h3 className="text-gray-500 text-xs md:text-sm uppercase font-semibold">Knowledge Base</h3>
-            <p className="text-2xl md:text-4xl font-bold text-gray-800 mt-2">{stats.kb_size}</p>
+          <div className="bg-white/80 backdrop-blur-xl p-6 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/20 hover:border-emerald-100 transition group">
+            <h3 className="text-gray-400 text-xs uppercase font-bold tracking-widest mb-1 group-hover:text-emerald-500 transition-colors">Knowledge Base</h3>
+            <p className="text-3xl font-bold text-gray-900">{stats.kb_size}</p>
+            <p className="text-xs text-gray-400 mt-1">Data Points</p>
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Action Items */}
-          <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-            <div className="bg-red-50 px-6 py-4 border-b border-red-100 flex justify-between items-center">
-              <h2 className="font-bold text-red-800">🔴 Action Items (Escalations)</h2>
-              <span className="text-xs bg-red-200 text-red-800 px-2 py-1 rounded-full">{escalations.length}</span>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div className="bg-red-50/50 px-6 py-4 border-b border-red-100 flex justify-between items-center">
+              <h2 className="font-bold text-red-900 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                Action Items
+              </h2>
+              <span className="text-xs bg-white text-red-600 border border-red-100 px-2 py-1 rounded-full font-bold shadow-sm">{escalations.length}</span>
             </div>
             <div className="p-0">
               {escalations.length === 0 ? (
@@ -137,12 +147,15 @@ export default function Dashboard() {
               ) : (
                 <ul>
                   {escalations.map((esc: any) => (
-                    <li key={esc.id} className="p-6 border-b hover:bg-gray-50 transition">
-                      <div className="flex justify-between mb-2">
-                        <span className="font-semibold text-gray-800">{esc.sender || "Unknown"}</span>
-                        <span className="text-xs text-gray-400">{new Date(esc.timestamp).toLocaleString()}</span>
+                    <li key={esc.id} className="p-6 border-b border-gray-100 hover:bg-gray-50 transition">
+                      <div className="flex justify-between mb-3">
+                        <span className="font-bold text-gray-900 flex items-center gap-2">
+                          <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-xs">👤</div>
+                          {esc.sender || "Unknown"}
+                        </span>
+                        <span className="text-xs text-gray-400 font-mono bg-gray-50 px-2 py-1 rounded">{new Date(esc.timestamp).toLocaleString()}</span>
                       </div>
-                      <p className="text-gray-600 bg-gray-100 p-3 rounded text-sm italic mb-4">"{esc.query}"</p>
+                      <p className="text-gray-700 bg-amber-50 border border-amber-100 p-4 rounded-xl text-sm mb-4 leading-relaxed">"{esc.query}"</p>
 
                       <ReplyBox
                         escalationId={esc.id}
@@ -159,17 +172,18 @@ export default function Dashboard() {
           </div>
 
           {/* Recent History */}
-          <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-            <div className="bg-gray-50 px-6 py-4 border-b border-gray-100">
-              <h2 className="font-bold text-gray-700">💬 Recent Activity</h2>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div className="bg-gray-50/50 px-6 py-4 border-b border-gray-100">
+              <h2 className="font-bold text-gray-700">Recent Activity</h2>
             </div>
             <ul className="divide-y">
               {history.map((msg: any) => (
                 <li key={msg.id} className="p-4 hover:bg-gray-50 text-sm">
                   <div className="flex justify-between items-start">
                     <div className="flex flex-col">
-                      <span className={`font-bold mb-1 ${msg.sender === 'bot' ? 'text-blue-600' : (msg.sender === 'owner' ? 'text-purple-600' : 'text-gray-800')}`}>
-                        {msg.sender === 'bot' ? 'AI Bot' : (msg.sender === 'owner' ? 'Owner' : 'Customer')}
+                      <span className={`font-bold mb-1 text-xs uppercase tracking-wider ${msg.sender === 'bot' ? 'text-violet-600' : (msg.sender === 'owner' ? 'text-emerald-600' : 'text-gray-900')
+                        }`}>
+                        {msg.sender === 'bot' ? 'Zopit AI' : (msg.sender === 'owner' ? 'You' : 'Customer')}
                       </span>
                       <p className="text-gray-600">{msg.text}</p>
                     </div>
@@ -223,10 +237,10 @@ function ReplyBox({ escalationId, onReplySuccess }: { escalationId: number, onRe
   }
 
   return (
-    <div className="mt-2">
+    <div className="mt-2 text-right">
       <textarea
-        className="w-full border p-2 rounded text-sm text-gray-900 mb-2 focus:ring-2 focus:ring-blue-500 outline-none"
-        placeholder="Type your answer here..."
+        className="w-full border border-gray-200 p-3 rounded-xl text-sm text-gray-900 mb-3 focus:ring-2 focus:ring-violet-500 focus:border-violet-500 outline-none transition shadow-sm resize-none"
+        placeholder="Type your answer to resolve this..."
         rows={2}
         value={reply}
         onChange={e => setReply(e.target.value)}
@@ -235,7 +249,7 @@ function ReplyBox({ escalationId, onReplySuccess }: { escalationId: number, onRe
         <button
           onClick={handleSend}
           disabled={sending || !reply.trim()}
-          className="bg-blue-600 text-white px-4 py-1.5 rounded text-sm font-semibold hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition"
+          className="bg-black text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition shadow-md hover:shadow-lg"
         >
           {sending ? 'Sending...' : 'Reply & Verify'}
         </button>

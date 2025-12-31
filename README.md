@@ -1,6 +1,6 @@
-# Shopper - AI-Powered Local Business Assistant 🛍️🤖
+# Zopit - Customer queries, under control. 🛍️🤖
 
-**Shopper** is an AI-powered local business assistant on WhatsApp. It bridges the gap between local shops and modern digital discovery, providing users with a "Super App" like experience for finding nearby businesses and chatting with them to get verified information instantly.
+**Zopit** is an AI-powered local business assistant on WhatsApp. It bridges the gap between local shops and modern digital discovery, providing users with a "Super App" like experience for finding nearby businesses and chatting with them to get verified information instantly.
 
 ![Status](https://img.shields.io/badge/Status-Pilot%20Ready-blue) ![Stack](https://img.shields.io/badge/Tech-FastAPI%20%7C%20Next.js%20%7C%20Gemini-green) ![Platform](https://img.shields.io/badge/Platform-WhatsApp%20%7C%20Web-25D366)
 
@@ -14,7 +14,7 @@ To provide every extensive local business with an **AI Front Desk** that works 2
 
 ## 🚀 Key Features
 
-### 🛒 For Shoppers (AI Assistant)
+### 🛒 For Customers (AI Assistant)
 *   **📍 Hyperlocal Discovery**: 
     *   **Real-time Location**: Find shops nearby using GPS location sharing.
     *   **Smart Ranking**: Results are sorted by Distance, Partner Status (Verified), and Response Speed.
@@ -74,7 +74,7 @@ To provide every extensive local business with an **AI Front Desk** that works 2
 ## 📂 Project Structure
 
 ```bash
-shopper/
+zopit/
 ├── app/                    # Backend (FastAPI)
 │   ├── api/                # API Routes (auth, chat, upload)
 │   ├── core/               # Business Logic (router, search, state machine)
@@ -106,8 +106,8 @@ shopper/
 ### 2. Backend Setup
 ```bash
 # Clone
-git clone https://github.com/your-repo/shopper.git
-cd shopper
+git clone https://github.com/your-repo/zopit.git
+cd zopit
 
 # Environment
 python3 -m venv venv
@@ -133,8 +133,8 @@ npm run dev
 ```
 
 ### 4. Deployment (Pilot Phase)
-*   **Frontend**: Deployed on **Vercel** (`shopper-demo.vercel.app`).
-*   **Backend**: Deployed on **Render** (`shopper-api.onrender.com`).
+*   **Frontend**: Deployed on **Vercel** (`zopit-demo.vercel.app`).
+*   **Backend**: Deployed on **Render** (`zopit-api.onrender.com`).
 *   **Docs**: See `deployment_guide.md` for detailed step-by-step instructions.
 
 ---
@@ -162,3 +162,6 @@ npm run dev
 - [ ] **Inventory Sync**: Excel/CSV upload to update product availability real-time.
 - [ ] **Voice Calls**: AI handling incoming voice calls via Twilio Voice.
 - [ ] **Multi-Agent**: Specialized agents for Booking vs Support vs Sales.
+
+## Copyright
+&copy; 2026 Zopit Inc.

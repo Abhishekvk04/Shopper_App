@@ -84,7 +84,10 @@ export default function Signup() {
     <div className="min-h-screen flex items-center justify-center bg-white p-6">
       <div className="w-full max-w-sm">
         <div className="mb-10 text-center">
-          <Link href="/" className="text-2xl font-bold tracking-tight text-black">shopper.</Link>
+          <Link href="/" className="text-2xl font-bold tracking-tight text-black flex items-center justify-center gap-2">
+            <span className="w-8 h-8 bg-violet-600 rounded-lg flex items-center justify-center text-white text-lg font-mono font-bold">Z</span>
+            Zopit.
+          </Link>
         </div>
 
         <h1 className="text-3xl font-bold mb-2 tracking-tight text-gray-900">
@@ -103,7 +106,7 @@ export default function Signup() {
                 type="text"
                 placeholder="Username"
                 required
-                className="w-full border-b border-gray-300 py-3 text-lg bg-transparent outline-none focus:border-black transition placeholder:text-gray-400 text-black"
+                className="w-full border-b border-gray-300 py-3 text-lg bg-transparent outline-none focus:border-violet-600 transition placeholder:text-gray-400 text-black"
                 value={formData.username}
                 onChange={e => setFormData({ ...formData, username: e.target.value })}
               />
@@ -113,7 +116,7 @@ export default function Signup() {
                 type="text"
                 placeholder="Business Name"
                 required
-                className="w-full border-b border-gray-300 py-3 text-lg bg-transparent outline-none focus:border-black transition placeholder:text-gray-400 text-black"
+                className="w-full border-b border-gray-300 py-3 text-lg bg-transparent outline-none focus:border-violet-600 transition placeholder:text-gray-400 text-black"
                 value={formData.company_name}
                 onChange={e => setFormData({ ...formData, company_name: e.target.value })}
               />
@@ -123,7 +126,7 @@ export default function Signup() {
                 type="text"
                 placeholder="WhatsApp Number"
                 required
-                className="w-full border-b border-gray-300 py-3 text-lg bg-transparent outline-none focus:border-black transition placeholder:text-gray-400 text-black"
+                className="w-full border-b border-gray-300 py-3 text-lg bg-transparent outline-none focus:border-violet-600 transition placeholder:text-gray-400 text-black"
                 value={formData.phone_number}
                 onChange={e => setFormData({ ...formData, phone_number: e.target.value })}
               />
@@ -132,7 +135,7 @@ export default function Signup() {
             <div className="pt-2">
               <label className="text-xs text-gray-500 uppercase font-bold tracking-widest mb-1 block">Category</label>
               <select
-                className="w-full border-b border-gray-300 py-2 text-lg bg-transparent outline-none focus:border-black transition text-black"
+                className="w-full border-b border-gray-300 py-2 text-lg bg-transparent outline-none focus:border-violet-600 transition text-black"
                 value={formData.category}
                 onChange={e => setFormData({ ...formData, category: e.target.value })}
               >
@@ -148,7 +151,7 @@ export default function Signup() {
               <textarea
                 placeholder="Full Address"
                 required
-                className="w-full border-b border-gray-300 py-3 text-lg bg-transparent outline-none focus:border-black transition placeholder:text-gray-400 text-black resize-none"
+                className="w-full border-b border-gray-300 py-3 text-lg bg-transparent outline-none focus:border-violet-600 transition placeholder:text-gray-400 text-black resize-none"
                 rows={2}
                 value={formData.address}
                 onChange={e => setFormData({ ...formData, address: e.target.value })}
@@ -171,7 +174,7 @@ export default function Signup() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-black text-white py-3.5 rounded-full font-medium hover:bg-gray-800 transition disabled:opacity-50 mt-6"
+              className="w-full bg-violet-600 text-white py-3.5 rounded-full font-medium hover:bg-violet-700 transition disabled:opacity-50 mt-6"
             >
               {loading ? 'Creating...' : 'Get Access Code'}
             </button>
@@ -198,13 +201,13 @@ export default function Signup() {
             </button>
             <button
               onClick={() => router.push('/login')}
-              className="w-full bg-black text-white py-3 rounded-full font-medium hover:bg-gray-800 transition"
+              className="w-full bg-violet-600 text-white py-3 rounded-full font-medium hover:bg-violet-700 transition"
             >
               Go to Login
             </button>
           </div>
         )}
       </div>
-    </div>
+    </div >
   );
 }

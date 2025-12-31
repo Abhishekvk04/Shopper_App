@@ -8,8 +8,8 @@ const TRANSLATIONS: Record<Language, any> = {
   en: {
     login: "Login",
     get_started: "Get Started",
-    hero_title: "Local retail,\nreinvented.",
-    hero_desc: "Shopper connects your physical store to WhatsApp. An AI front desk that answers, sells, and manages customers 24/7.",
+    hero_title: "Customer queries,\nunder control.",
+    hero_desc: "Zopit connects your business to WhatsApp with an AI front desk that handles customer enquiries, filters noise, and lets only meaningful conversations reach you — 24/7.",
     start_trial: "Start Free Trial",
     how_it_works: "See how it works",
     discovery: "Discovery",
@@ -34,7 +34,7 @@ const TRANSLATIONS: Record<Language, any> = {
     login: "लॉग इन",
     get_started: "शुरू करें",
     hero_title: "स्थानीय खुदरा,\nअब नए रूप में।",
-    hero_desc: "Shopper आपकी दुकान को WhatsApp से जोड़ता है। एक AI रिसेप्शनिस्ट जो 24/7 जवाब देता है, बिक्री करता है और ग्राहकों का प्रबंधन करता है।",
+    hero_desc: "Zopit आपकी दुकान को WhatsApp से जोड़ता है। एक AI रिसेप्शनिस्ट जो 24/7 जवाब देता है, बिक्री करता है और ग्राहकों का प्रबंधन करता है।",
     start_trial: "मुफ्त ट्रायल शुरू करें",
     how_it_works: "यह कैसे काम करता है",
     discovery: "खोज",
@@ -59,7 +59,7 @@ const TRANSLATIONS: Record<Language, any> = {
     login: "ಲಾಗಿನ್",
     get_started: "ಪ್ರಾರಂಭಿಸಿ",
     hero_title: "ಸ್ಥಳೀಯ ವ್ಯಾಪಾರ,\nಹೊಸ ರೂಪದಲ್ಲಿ.",
-    hero_desc: "Shopper ನಿಮ್ಮ ಅಂಗಡಿಯನ್ನು WhatsApp ನೊಂದಿಗೆ ಸಂಪರ್ಕಿಸುತ್ತದೆ. 24/7 ಗ್ರಾಹಕರನ್ನು ನಿರ್ವಹಿಸುವ, ಮಾರಾಟ ಮಾಡುವ ಮತ್ತು ಉತ್ತರಿಸುವ AI ರಿಸೆಪ್ಷನಿಸ್ಟ್.",
+    hero_desc: "Zopit ನಿಮ್ಮ ಅಂಗಡಿಯನ್ನು WhatsApp ನೊಂದಿಗೆ ಸಂಪರ್ಕಿಸುತ್ತದೆ. 24/7 ಗ್ರಾಹಕರನ್ನು ನಿರ್ವಹಿಸುವ, ಮಾರಾಟ ಮಾಡುವ ಮತ್ತು ಉತ್ತರಿಸುವ AI ರಿಸೆಪ್ಷನಿಸ್ಟ್.",
     start_trial: "ಉಚಿತ ಟ್ರಯಲ್ ಪ್ರಾರಂಭಿಸಿ",
     how_it_works: "ಇದು ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ",
     discovery: "ಅನ್ವೇಷಣೆ",
@@ -84,7 +84,7 @@ const TRANSLATIONS: Record<Language, any> = {
     login: "లాగిన్",
     get_started: "ప్రారంభించండి",
     hero_title: "స్థానిక వ్యాపారం,\nకొత్త రూపంలో.",
-    hero_desc: "Shopper మీ దుకాణాన్ని WhatsApp తో కలుపుతుంది. 24/7 సమాధానం ఇచ్చే, విక్రయించే మరియు కస్టమర్లను నిర్వహించే AI అసిస్టెంట్.",
+    hero_desc: "Zopit మీ దుకాణాన్ని WhatsApp తో కలుపుతుంది. 24/7 సమాధానం ఇచ్చే, విక్రయించే మరియు కస్టమర్లను నిర్వహించే AI అసిస్టెంట్.",
     start_trial: "ఉచిత ట్రయల్ ప్రారంభించండి",
     how_it_works: "ఇది ఎలా పనిచేస్తుంది",
     discovery: "ఆవిష్కరణ",
@@ -109,7 +109,7 @@ const TRANSLATIONS: Record<Language, any> = {
     login: "உள்நுழைய",
     get_started: "தொடங்கவும்",
     hero_title: "உள்ளூர் வர்த்தகம்,\nபுதிய வடிவில்.",
-    hero_desc: "Shopper உங்கள் கடையை WhatsApp உடன் இணைக்கிறது. 24/7 பதிலளிக்கும் AI உதவியாளர்.",
+    hero_desc: "Zopit உங்கள் கடையை WhatsApp உடன் இணைக்கிறது. 24/7 பதிலளிக்கும் AI உதவியாளர்.",
     start_trial: "இலவசமாகத் தொடங்குங்கள்",
     how_it_works: "எப்படி வேலை செய்கிறது",
     discovery: "கண்டுபிடிப்பு",
@@ -134,7 +134,7 @@ const TRANSLATIONS: Record<Language, any> = {
     login: "ലോഗിൻ",
     get_started: "തുടങ്ങാം",
     hero_title: "പ്രാദേശിക വ്യാപാരം,\nപുതിയ രീതിയിൽ.",
-    hero_desc: "Shopper നിങ്ങളുടെ കടയെ WhatsApp-മായി ബന്ധിപ്പിക്കുന്നു. 24/7 പ്രവർത്തിക്കുന്ന AI സഹായി.",
+    hero_desc: "Zopit നിങ്ങളുടെ കടയെ WhatsApp-മായി ബന്ധിപ്പിക്കുന്നു. 24/7 പ്രവർത്തിക്കുന്ന AI സഹായി.",
     start_trial: "സൗജന്യ ട്രയൽ",
     how_it_works: "എങ്ങനെ പ്രവർത്തിക്കുന്നു",
     discovery: "കണ്ടെത്തൽ",
@@ -159,7 +159,7 @@ const TRANSLATIONS: Record<Language, any> = {
     login: "ಲಾಗಿನ್",
     get_started: "ಸುರು ಮಲ್ಪುಲೆ",
     hero_title: "ನಮ್ಮ ಊರುದ ಅಂಗಡಿ,\nಪೊಸ ರೀತಿಡ್.",
-    hero_desc: "Shopper ನಮ್ಮ ಅಂಗಡಿನ್ WhatsAppಗ್ ಸೇರಾವುಂಡು. 24/7 ಬೇಲೆ ಮಲ್ಪುನ AI.",
+    hero_desc: "Zopit ನಮ್ಮ ಅಂಗಡಿನ್ WhatsAppಗ್ ಸೇರಾವುಂಡು. 24/7 ಬೇಲೆ ಮಲ್ಪುನ AI.",
     start_trial: "ಉಚಿತ ಟ್ರಯಲ್",
     how_it_works: "ಎಂಚ ಬೇಲೆ ಮಲ್ಪುಂಡು",
     discovery: "ತುಲೆ",
@@ -187,11 +187,16 @@ export default function LandingPage() {
   const t = TRANSLATIONS[lang];
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans selection:bg-black selection:text-white">
+    <div className="min-h-screen bg-white text-black font-sans selection:bg-violet-600 selection:text-white">
+      {/* Background Gradient Mesh */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-violet-200/40 blur-[100px] rounded-full"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-violet-200/30 blur-[100px] rounded-full"></div>
+      </div>
       {/* Navbar */}
-      <nav className="fixed w-full z-50 mix-blend-difference text-white">
+      <nav className="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold tracking-tight">shopper.</Link>
+          <Link href="/" className="text-xl font-bold tracking-tight">Zopit.</Link>
 
           <div className="flex items-center gap-6">
             <div className="relative group">
@@ -218,21 +223,75 @@ export default function LandingPage() {
       </nav>
 
       {/* Hero */}
-      <section className="pt-40 pb-20 px-6 max-w-7xl mx-auto">
-        <div className="max-w-3xl">
+      <section className="pt-32 pb-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="relative z-10">
           <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-[0.9] mb-12 whitespace-pre-line">
-            {t.hero_title}
+            {t.hero_title.split('\n')[0]} <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-indigo-600">{t.hero_title.split('\n')[1]}</span>
           </h1>
           <p className="text-xl md:text-2xl leading-relaxed text-gray-600 max-w-xl mb-12">
             {t.hero_desc}
           </p>
           <div className="flex gap-6 items-center">
-            <Link href="/signup" className="bg-black text-white px-8 py-4 rounded-full font-medium hover:bg-gray-800 transition">
+            <Link href="/signup" className="bg-violet-600 text-white px-8 py-4 rounded-full font-medium hover:bg-violet-700 transition shadow-lg shadow-violet-200">
               {t.start_trial}
             </Link>
-            <Link href="#demo" className="border-b border-black pb-0.5 hover:opacity-50 transition">
+            <Link href="#demo" className="border-b border-black pb-0.5 hover:text-violet-600 hover:border-violet-600 transition">
               {t.how_it_works}
             </Link>
+          </div>
+        </div>
+
+        {/* 3D Animation Area */}
+        <div className="relative h-[600px] hidden md:flex items-center justify-center perspective-[2000px]">
+          {/* Floating Elements Container */}
+          <div className="relative w-full h-full transform-style-3d rotate-y-[-12deg] rotate-x-[10deg] hover:rotate-y-[-5deg] hover:rotate-x-[5deg] transition-transform duration-700 ease-out">
+
+            {/* 1. Customer Phone (Bottom Left) */}
+            <div className="absolute bottom-20 left-10 w-64 bg-white rounded-3xl shadow-2xl border-4 border-gray-900 p-4 transform translate-z-20 animate-[float_6s_ease-in-out_infinite]">
+              <div className="w-16 h-1 bg-gray-200 rounded-full mx-auto mb-4"></div>
+              <div className="space-y-3">
+                <div className="flex gap-2 items-end">
+                  <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-xs">👤</div>
+                  <div className="bg-gray-100 rounded-2xl rounded-bl-none px-3 py-2 text-xs text-gray-600">Do you have sourdough bread?</div>
+                </div>
+                <div className="flex gap-2 items-end flex-row-reverse">
+                  <div className="w-8 h-8 rounded-full bg-violet-100 flex items-center justify-center text-xs font-bold text-violet-600">Z</div>
+                  <div className="bg-violet-600 text-white rounded-2xl rounded-br-none px-3 py-2 text-xs">Yes! Fresh batch ready at 2 PM. Reserve one? 🥖</div>
+                </div>
+              </div>
+              {/* Connection Line */}
+              <div className="absolute -top-32 right-10 w-1 h-32 bg-gradient-to-t from-violet-500 to-transparent opacity-50"></div>
+            </div>
+
+            {/* 2. AI Core (Center) */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gray-900/90 backdrop-blur-xl rounded-full shadow-[0_0_80px_rgba(124,58,237,0.5)] border border-violet-500/50 flex items-center justify-center transform translate-z-40 z-20 animate-[pulse_4s_ease-in-out_infinite]">
+              <div className="relative w-32 h-32">
+                <div className="absolute inset-0 border-4 border-violet-500 rounded-full animate-[spin_10s_linear_infinite] border-t-transparent"></div>
+                <div className="absolute inset-4 border-4 border-indigo-400 rounded-full animate-[spin_8s_linear_infinite_reverse] border-t-transparent"></div>
+                <div className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold tracking-tighter">AI</div>
+              </div>
+            </div>
+
+            {/* 3. Business Dashboard (Top Right) */}
+            <div className="absolute top-20 right-0 w-72 bg-white/90 backdrop-blur-md rounded-xl shadow-2xl border border-white/50 p-4 transform translate-z-0 animate-[float_7s_ease-in-out_infinite_1s]">
+              <div className="flex justify-between items-center mb-4 border-b border-gray-100 pb-2">
+                <div className="text-xs font-bold text-gray-400 uppercase tracking-widest">New Order</div>
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              </div>
+              <div className="flex gap-3 items-center">
+                <div className="w-10 h-10 rounded-lg bg-violet-100 flex items-center justify-center text-xl">🥖</div>
+                <div>
+                  <div className="text-sm font-bold text-gray-800">1x Sourdough</div>
+                  <div className="text-xs text-green-600 font-medium">$8.00 • Paid</div>
+                </div>
+              </div>
+              {/* Connection Line */}
+              <div className="absolute -bottom-20 left-10 w-0.5 h-20 bg-gradient-to-b from-violet-500 to-transparent dashed opacity-50"></div>
+            </div>
+
+            {/* Decorative Elements */}
+            <div className="absolute top-1/4 right-1/4 w-4 h-4 bg-yellow-400 rounded-full blur-sm animate-ping"></div>
+            <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-blue-400 rounded-full blur-sm animate-ping delay-700"></div>
           </div>
         </div>
       </section>
@@ -240,23 +299,23 @@ export default function LandingPage() {
       {/* Minimal Feature List */}
       <section className="py-32 px-6 border-t border-gray-100">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 md:gap-24">
-          <div>
-            <span className="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">{t.discovery}</span>
-            <h3 className="text-2xl font-semibold mb-4">{t.location_aware}</h3>
+          <div className="group p-8 rounded-3xl bg-white border border-gray-100 hover:border-violet-100 hover:shadow-2xl hover:shadow-violet-100/50 transition duration-500 hover:-translate-y-1">
+            <span className="block text-xs font-bold uppercase tracking-widest text-violet-500 mb-4">{t.discovery}</span>
+            <h3 className="text-2xl font-bold mb-4 group-hover:text-violet-700 transition">{t.location_aware}</h3>
             <p className="text-gray-600 leading-relaxed">
               {t.location_desc}
             </p>
           </div>
-          <div>
-            <span className="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">{t.intelligence}</span>
-            <h3 className="text-2xl font-semibold mb-4">{t.zero_friction}</h3>
+          <div className="group p-8 rounded-3xl bg-white border border-gray-100 hover:border-violet-100 hover:shadow-2xl hover:shadow-violet-100/50 transition duration-500 hover:-translate-y-1">
+            <span className="block text-xs font-bold uppercase tracking-widest text-violet-500 mb-4">{t.intelligence}</span>
+            <h3 className="text-2xl font-bold mb-4 group-hover:text-violet-700 transition">{t.zero_friction}</h3>
             <p className="text-gray-600 leading-relaxed">
               {t.friction_desc}
             </p>
           </div>
-          <div>
-            <span className="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">{t.growth}</span>
-            <h3 className="text-2xl font-semibold mb-4">{t.verified_trust}</h3>
+          <div className="group p-8 rounded-3xl bg-white border border-gray-100 hover:border-violet-100 hover:shadow-2xl hover:shadow-violet-100/50 transition duration-500 hover:-translate-y-1">
+            <span className="block text-xs font-bold uppercase tracking-widest text-violet-500 mb-4">{t.growth}</span>
+            <h3 className="text-2xl font-bold mb-4 group-hover:text-violet-700 transition">{t.verified_trust}</h3>
             <p className="text-gray-600 leading-relaxed">
               {t.trust_desc}
             </p>
@@ -267,7 +326,7 @@ export default function LandingPage() {
       {/* Big Image / Demo Placeholder */}
       {/* Video Demo Section */}
       <section id="demo" className="px-2 md:px-6 pb-20 md:pb-32">
-        <div className="max-w-7xl mx-auto bg-gray-900 rounded-xl md:rounded-3xl p-1 md:p-4 shadow-2xl overflow-hidden relative group">
+        <div className="max-w-7xl mx-auto bg-gray-900 rounded-xl md:rounded-3xl p-1 md:p-4 shadow-2xl shadow-violet-500/20 overflow-hidden relative group border border-gray-800">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-gray-800 to-black opacity-50 z-0"></div>
 
           {/* Browser Mockup Header */}
@@ -276,7 +335,7 @@ export default function LandingPage() {
             <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
             <div className="w-3 h-3 rounded-full bg-green-500"></div>
             <div className="ml-4 bg-gray-900 rounded-md px-3 py-0.5 text-xs text-gray-500 flex-1 text-center font-mono">
-              shopper.local
+              <span className="text-violet-400">https://</span>zopit.local
             </div>
           </div>
 
@@ -301,29 +360,30 @@ export default function LandingPage() {
       </section>
 
       {/* Simple Pricing */}
-      <section className="py-32 px-6 bg-black text-white">
+      <section className="py-32 px-6 bg-black text-white relative leading-relaxed">
+        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-violet-500 to-transparent opacity-20"></div>
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8">{t.pricing_title}</h2>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-8 text-white">{t.pricing_title}</h2>
             <p className="text-xl text-gray-400 max-w-md">
               {t.pricing_desc}
             </p>
           </div>
           <div className="grid grid-cols-2 gap-12 w-full md:w-auto">
             <div>
-              <div className="text-3xl font-bold mb-2">{t.free}</div>
+              <div className="text-3xl font-bold mb-2 text-white">{t.free}</div>
               <div className="text-gray-500 mb-4">{t.forever}</div>
               <ul className="text-sm text-gray-400 space-y-2">
-                <li>{t.chats_limit}</li>
-                <li>Basic Analytics</li>
+                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-violet-500"></div>{t.chats_limit}</li>
+                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-violet-500"></div>Basic Analytics</li>
               </ul>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">$15</div>
+              <div className="text-3xl font-bold mb-2 text-violet-400">$15</div>
               <div className="text-gray-500 mb-4">{t.per_month}</div>
               <ul className="text-sm text-gray-400 space-y-2">
-                <li>{t.unlimited_ai}</li>
-                <li>{t.verified_badge}</li>
+                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-violet-500"></div>{t.unlimited_ai}</li>
+                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-violet-500"></div>{t.verified_badge}</li>
               </ul>
             </div>
           </div>
@@ -334,7 +394,7 @@ export default function LandingPage() {
       <footer className="py-12 px-6 border-t border-gray-100">
         <div className="max-w-7xl mx-auto flex justify-between items-end">
           <div className="text-sm text-gray-400">
-            &copy; 2024 Shopper Inc.
+            &copy; 2026 Zopit Inc.
           </div>
           <div className="flex gap-6 text-sm font-medium">
             <a href="#" className="hover:underline">Legal</a>

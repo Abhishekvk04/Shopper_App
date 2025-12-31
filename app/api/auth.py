@@ -89,7 +89,7 @@ def recover(request: RecoveryRequest, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Phone number not registered")
     
     if request.type == 'username':
-        msg = f"Your Shopper Username is: {user.username}"
+        msg = f"Your Zopit Username is: {user.username}"
         send_whatsapp_message(user.phone_number, msg)
         print(f"=== RECOVERY USERNAME for {user.phone_number}: {user.username} ===")
         return {"status": "success", "message": f"Username sent to {user.phone_number} (check WhatsApp)"}

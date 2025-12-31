@@ -75,7 +75,7 @@ def handle_customer_flow(db: Session, session: UserSession, body: str, lat: floa
         
         if body.lower() in ["hi", "hello", "hey", "start", "menu"]:
              send_whatsapp_message(session.phone_number, 
-                "👋 Welcome back to Shopper! \nI can help you find nearby shops.\n\nWhat are you looking for today? (e.g., Bakery, Clinic, Salon)")
+                "👋 Welcome back to Zopit! \nI can help you find nearby shops.\n\nWhat are you looking for today? (e.g., Bakery, Clinic, Salon)")
              return
 
         # They typed a category (e.g. "Bakery")

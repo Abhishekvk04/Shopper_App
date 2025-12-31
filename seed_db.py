@@ -8,9 +8,9 @@ db = SessionLocal()
 
 # Check if exists
 if not db.query(Business).first():
-    print("🌱 Seeding Database with 'Shopper Partner Shop'...")
+    print("🌱 Seeding Database with 'Zopit Partner Shop'...")
     b = Business(
-        name="Shopper Partner Bakery",
+        name="Zopit Partner Bakery",
         phone_number="15550001111", 
         escalation_phone="15550001111",
         category="bakery",

@@ -29,7 +29,7 @@ def send_message(from_number, to_number, body, lat=None, lon=None):
         print(f"   ❌ Connection Error: {e}")
 
 print("=================================================")
-print("🚀 STARTING SHOPPER DISCOVERY SIMULATION")
+print("🚀 STARTING ZOPIT DISCOVERY SIMULATION")
 print("=================================================")
 
 # 1. Start Conversation

@@ -131,30 +131,33 @@ export default function KnowledgeBase() {
     }
 
     return (
-        <div className="min-h-screen bg-gray-50 p-8">
+        <div className="min-h-screen bg-violet-50/50 p-8 font-sans">
             <div className="max-w-4xl mx-auto">
                 <header className="mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <div>
                         <h1 className="text-3xl font-bold text-gray-900">Knowledge Base</h1>
                         <p className="text-gray-500 text-sm mt-1">Manage what your AI knows about your business.</p>
                     </div>
-                    <a href="/dashboard" className="flex items-center gap-2 text-gray-600 hover:text-blue-600 font-medium transition bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-100 hover:border-blue-100">
-                        <span>←</span> Back to Dashboard
+                    <a href="/dashboard" className="flex items-center gap-2 text-gray-500 hover:text-black font-medium transition bg-white px-4 py-2 rounded-full shadow-sm border border-gray-200 hover:border-gray-300">
+                        <span>←</span> Back
                     </a>
                 </header>
 
                 {/* Upload Document Form */}
-                <div className="bg-white p-6 rounded-lg shadow-sm mb-8 border-l-4 border-indigo-500">
-                    <h2 className="text-lg font-semibold mb-4 text-indigo-900">📄 Upload Document (PDF/Text)</h2>
+                <div className="bg-white p-8 rounded-2xl shadow-sm mb-8 border border-gray-100">
+                    <h2 className="text-xl font-bold mb-4 text-gray-900 flex items-center gap-2">
+                        <span className="p-2 bg-violet-100 text-violet-600 rounded-lg">📄</span>
+                        Upload Context
+                    </h2>
 
                     {/* List of Uploaded Docs */}
                     {docs.length > 0 && (
                         <div className="mb-6 flex flex-wrap gap-2">
                             {docs.map((doc: string) => (
-                                <div key={doc} className="flex items-center bg-indigo-100 rounded-full px-3 py-1 gap-2">
+                                <div key={doc} className="flex items-center bg-violet-50 border border-violet-100 rounded-full px-4 py-1.5 gap-2 transition hover:shadow-sm">
                                     <button
                                         onClick={() => handlePreview(doc)}
-                                        className="text-indigo-700 text-xs font-bold hover:underline flex items-center gap-1"
+                                        className="text-violet-700 text-xs font-semibold hover:underline flex items-center gap-1"
                                     >
                                         📄 {doc}
                                     </button>
@@ -232,8 +235,8 @@ export default function KnowledgeBase() {
                 file:mr-4 file:py-2 file:px-4
                 file:rounded-full file:border-0
                 file:text-sm file:font-semibold
-                file:bg-indigo-50 file:text-indigo-700
-                hover:file:bg-indigo-100"
+                file:bg-violet-50 file:text-violet-700
+                hover:file:bg-violet-100"
                         />
                     </div>
                 </div>
@@ -246,14 +249,14 @@ export default function KnowledgeBase() {
                         <select
                             value={lang}
                             onChange={(e) => setLang(e.target.value)}
-                            className="text-sm p-2 rounded border border-gray-300 text-gray-700 outline-none focus:ring-2 focus:ring-blue-500"
+                            className="text-sm p-2 rounded-lg border border-gray-200 text-gray-700 outline-none focus:ring-2 focus:ring-violet-500"
                         >
                             {languages.map(l => <option key={l.code} value={l.code}>{l.name}</option>)}
                         </select>
                         <button
                             type="button"
                             onClick={startListening}
-                            className={`flex items-center gap-2 px-3 py-2 rounded text-sm font-bold transition ${isListening ? 'bg-red-500 text-white animate-pulse' : 'bg-blue-600 text-white hover:bg-blue-700'}`}
+                            className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold transition shadow-sm ${isListening ? 'bg-red-500 text-white animate-pulse' : 'bg-black text-white hover:bg-gray-800'}`}
                         >
                             {isListening ? '🎤 Listening...' : '🎤 Speak'}
                         </button>
@@ -264,12 +267,12 @@ export default function KnowledgeBase() {
                             <textarea
                                 value={newA}
                                 onChange={e => setNewA(e.target.value)}
-                                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 border text-gray-900 selection:bg-blue-200 selection:text-blue-900"
+                                className="mt-1 block w-full rounded-xl border-gray-200 shadow-sm p-4 border text-gray-900 focus:ring-2 focus:ring-violet-500 outline-none transition"
                                 placeholder="e.g. paste your entire menu or FAQ page text here..."
                                 rows={6}
                             />
                         </div>
-                        <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-fit">
+                        <button type="submit" className="bg-violet-600 text-white px-6 py-2.5 rounded-full hover:bg-violet-700 w-fit font-semibold shadow-lg shadow-violet-200 transition">
                             Add to Brain 🧠
                         </button>
                     </form>
@@ -287,7 +290,7 @@ export default function KnowledgeBase() {
                                     <p className="font-medium text-gray-900">Q: {entry.question}</p>
                                     <p className="text-gray-600 mt-1">A: {entry.answer}</p>
                                     <div className="mt-2 text-xs text-gray-400">
-                                        Source: <span className={`uppercase font-bold ${entry.source === 'learned' ? 'text-purple-500' : 'text-green-500'}`}>{entry.source}</span>
+                                        Source: <span className={`uppercase font-bold tracking-wider ${entry.source === 'learned' ? 'text-violet-500' : 'text-emerald-500'}`}>{entry.source}</span>
                                     </div>
                                 </li>
                             ))}
